@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name": "QR Fox",
+    "version": "1.0.0",
+    "author": "Daniel Keogh",
+    "homepage_url": "https://github.com/daniel-keogh/qr-fox",
+    "description": "Generate QR codes from URLs.",
+    "icons": {
+        "32": "assets/icons/qr-fox.svg",
+        "48": "assets/icons/qr-fox.svg",
+        "96": "assets/icons/qr-fox.svg"
+    },
+    "permissions": [
+        "activeTab",
+        "menus",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["background/background.js"]
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content_scripts/content_scripts.js"],
+          "css": ["content_scripts/content_scripts.css"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "assets/icons/qr-fox.svg",
+            "32": "assets/icons/qr-fox.svg"
+        },
+        "default_title": "QR Fox",
+        "default_popup": "popup/popup.html"
+    },	
+    "options_ui": {
+        "page": "options/options.html",
+        "browser_style": true
+    }
+}

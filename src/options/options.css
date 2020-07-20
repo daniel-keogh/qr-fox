@@ -1,0 +1,109 @@
+:root {
+    /* Photon CSS Variables: https://design.firefox.com/photon/ */ 
+    --blue-50: #0a84ff;
+    --blue-50-a30: rgba(10, 132, 255, 0.3);
+    --blue-60: #0060df;
+    --blue-70: #003eaa;
+    --blue-80: #002275;
+    --grey-90: #0c0c0d;
+    --grey-90-a10: rgba(12, 12, 13, 0.1);
+    --grey-90-a20: rgba(12, 12, 13, 0.2);
+    --grey-90-a30: rgba(12, 12, 13, 0.3);
+}
+
+.options-form {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 25px;
+}
+
+.form-group {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--grey-90-a10);
+    border-radius: 2px;
+}
+
+.form-group label {
+    padding: 5px;
+}
+
+.colours label {
+    display: inline-block
+}
+
+input[type='color'] {
+    padding: 0;
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+input[type='range'] {
+    width: 100%;
+}
+
+.slider-container {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    padding-top: 30px;
+}
+
+.btn {
+    color: #ffffff;
+    background-color: var(--blue-60);
+    border-radius: 2px;
+    border: none;
+    height: 32px;
+    width: auto;
+    min-width: 132px;
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn::-moz-focus-inner {
+    border: 0;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 1px var(--blue-50) inset, 
+                0 0 0 1px var(--blue-50), 
+                0 0 0 4px var(--blue-50-a30);
+}
+
+.save-btn {
+    margin-left: 6px;
+}
+
+.save-btn:hover {
+    background-color: var(--blue-70);
+}
+
+.save-btn:active {
+    background-color: var(--blue-80);
+}
+
+.reset-btn {
+    margin-right: 6px;
+    color: var(--grey-90);
+    background-color: var(--grey-90-a10);
+}
+
+.reset-btn:hover {
+    background-color: var(--grey-90-a20);
+}
+
+.reset-btn:active {
+    background-color: var(--grey-90-a30);
+}
