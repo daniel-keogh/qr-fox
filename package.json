@@ -1,0 +1,36 @@
+{
+  "name": "qr-fox",
+  "version": "1.0.0",
+  "description": "Simple Firefox add-on for generating QR codes from URLs.",
+  "scripts": {
+    "start": "concurrently \"npm run build:watch\" \"npm run start:webext\" --restart-tries 1",
+    "start:webext": "web-ext run -s ./addon/",
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-keogh/qr-fox.git"
+  },
+  "author": "Daniel Keogh",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/daniel-keogh/qr-fox/issues"
+  },
+  "homepage": "https://github.com/daniel-keogh/qr-fox#readme",
+  "dependencies": {
+    "kjua": "^0.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^3.6.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "web-ext": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
